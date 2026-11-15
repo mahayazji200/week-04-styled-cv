@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>المهمة 1: نسّق سيرتك الذاتية</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- TODO 1: اربط هنا ملف CSS خارجيًا اسمه "style.css" -->
+    <!-- <link rel="stylesheet" href="style.css"> -->
+
+    <style>
+        /* ============================================
+           تعليمات المهمة - لا تعدّل هذا الجزء
+           ============================================ */
+        body { font-family: 'IBM Plex Sans Arabic', 'Inter', sans-serif; background: #0f0f1a; color: #e0e0e0; padding: 30px; direction: rtl; line-height: 1.8; }
+        .uni-header { display: flex; align-items: center; gap: 10px; margin-bottom: 20px; padding-bottom: 15px; border-bottom: 1px solid rgba(255,255,255,0.06); }
+        .uni-header img { width: 35px; height: 35px; border-radius: 8px; object-fit: contain; background: #fff; padding: 2px; }
+        .uni-header span { color: #888; font-size: 0.85rem; font-weight: 600; }
+        .instructions h1 { color: #4caf50; margin-bottom: 5px; font-size: 1.8rem; }
+        .instructions .desc { color: #888; margin-bottom: 25px; }
+        .task { background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.06); border-radius: 10px; padding: 20px; margin-bottom: 15px; }
+        .task h3 { color: #fff; margin-bottom: 8px; }
+        .task-num { color: #4caf50; font-weight: 700; }
+        .hint { background: rgba(76,175,80,0.08); border: 1px solid rgba(76,175,80,0.2); border-radius: 8px; padding: 12px; margin-top: 8px; font-size: 0.9rem; }
+        .hint strong { color: #4caf50; }
+        .instructions code { background: rgba(255,255,255,0.08); padding: 2px 8px; border-radius: 4px; color: #4caf50; font-family: monospace; direction: ltr; display: inline-block; }
+        .separator { border: none; border-top: 2px dashed rgba(76,175,80,0.3); margin: 40px 0; }
+
+        /* ===================================
+           اكتب كود CSS الخاص بك أسفل هذا السطر
+           اكتب هنا تنسيقات السيرة الذاتية
+           =================================== */
+
+        /* TODO 1: اجعل font-family للعنصر body هو 'Inter', sans-serif
+                   (أو 'IBM Plex Sans Arabic' للنصوص العربية)
+                   حدّد لون الخلفية background-color للعنصر body
+                   حدّد لونًا أساسيًا للنص */
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #1a1a2e;
+  color: #f1f1f1;
+  line-height: 1.6;
+}
+
+        /* TODO 2: نسّق قسم رأس السيرة الذاتية
+                   - أضف خلفية متدرّجة (مثل linear-gradient)
+                   - اجعل النص في المنتصف
+                   - أضف حشوة padding (لا تقل عن 30px)
+                   - اجعل الاسم أبيض وكبيرًا
+                   - اجعل المسمّى الوظيفي/العنوان الفرعي بلون أفتح */
+.cv-header {
+  background: linear-gradient(135deg, #1a1a2e, #16213e);
+  text-align: center;
+  padding: 40px 20px;
+  border-radius: 12px;
+}
+        /* TODO 3: نسّق قائمة المهارات
+                   - أزل النقاط الافتراضية (list-style: none)
+                   - اعرض المهارات كوسوم متجاورة (display: inline-block)
+                   - أضف لكل مهارة لون خلفية و padding و border-radius
+                   - أضف مسافة margin بين الوسوم */
+.skills-list {
+  list-style: none;
+}.skills-list li {
+  display: inline-block;
+  background: #4caf50;
+  padding: 5px 15px;
+  border-radius: 20px;
+  margin: 5px;
+}
+
+        /* TODO 4: نسّق الجدول
+                   - أضف حدودًا مع استخدام border-collapse: collapse
+                   - نسّق صف العناوين (th) بلون خلفية
+                   - لوّن الصفوف بالتناوب باستخدام :nth-child(even)
+                   - أضف padding للخلايا */
+table {
+  width: 100%;
+  border-collapse: collapse;
+}th, td {
+th {
+  background: #4caf50;
+  color: #fff;
+}
+th {
+  background: #4caf50;
+  color: #fff;
+}
+  border: 1px solid #444;
+  padding: 10px;
+}tr:nth-child(even) {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+        /* TODO 5: نسّق الروابط
+                   - غيّر اللون إلى الأخضر (#4caf50)
+                   - أزل الخط السفلي (text-decoration: none)
+                   - أضف تأثيرًا عند مرور الفأرة (hover) مثل تغيير اللون أو إظهار الخط السفلي */
+a {
+  color: #4caf50;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+        /* TODO 6: أضف ظلًا box-shadow لحاوية السيرة الذاتية الرئيسية
+                   - استخدم ظلًا خفيفًا مثل: 0 5px 30px rgba(0,0,0,0.3) */
+
+.cv-container {
+  box-shadow: 0 5px 30px rgba(0, 0, 0, 0.3);
+}
+        /* TODO 7: نسّق الصورة الشخصية
+                   - اجعلها دائرية (border-radius: 50%)
+                   - أضف إطارًا (مثل 3px solid #4caf50)
+                   - أضف box-shadow
+                   - اجعل العرض width حوالي 150px */
+.cv-photo {
+  width: 150px;
+  border-radius: 50%;
+  border: 3px solid #4caf50;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+}
+        pre, code, kbd, samp, .code, .code-block { direction: ltr; text-align: left; unicode-bidi: isolate; }
+    </style>
+</head>
+<body>
+
+    <div class="uni-header">
+        <img src="https://alaqsa.edu.ps/site/MainPage/Resources/img/logo.png" alt="جامعة الأقصى">
+        <span>جامعة الأقصى - تصميم وإدارة مواقع الإنترنت 1</span>
+    </div>
+
+    <div class="instructions">
+        <h1>المهمة 1: نسّق سيرتك الذاتية</h1>
+        <p class="desc">طبّق تنسيقات CSS على سيرة ذاتية بسيطة مكتوبة بلغة HTML. أكمل جميع المهام (TODO) الموجودة في قسم &lt;style&gt; في أعلى الملف.</p>
+
+        <div class="task">
+            <h3><span class="task-num">TODO 1:</span> تنسيق الصفحة والخط</h3>
+            <p>اجعل الخط <code>'Inter', sans-serif</code>، وأضف لون خلفية داكنًا، واختر لونًا فاتحًا للنص في الصفحة كلها.</p>
+            <div class="hint">
+                <strong>الخصائص:</strong> <code>font-family</code>, <code>background-color</code>, <code>color</code>, <code>line-height</code>
+            </div>
+        </div>
+
+        <div class="task">
+            <h3><span class="task-num">TODO 2:</span> رأس بخلفية متدرّجة</h3>
+            <p>نسّق القسم <code>.cv-header</code> بخلفية متدرّجة (Gradient)، ونص في المنتصف، وحشوة (padding) واسعة.</p>
+            <div class="hint">
+                <strong>الخصائص:</strong> <code>background: linear-gradient(135deg, #1a1a2e, #16213e)</code>, <code>text-align: center</code>, <code>padding</code>, <code>border-radius</code>
+            </div>
+        </div>
+
+        <div class="task">
+            <h3><span class="task-num">TODO 3:</span> المهارات على شكل وسوم</h3>
+            <p>حوّل قائمة المهارات إلى وسوم ملوّنة، بحيث تظهر كل مهارة كقرص صغير ملوّن بحواف دائرية.</p>
+            <div class="hint">
+                <strong>الخصائص:</strong> <code>list-style: none</code>, <code>display: inline-block</code>, <code>background</code>, <code>padding: 5px 15px</code>, <code>border-radius: 20px</code>, <code>margin: 5px</code>
+            </div>
+        </div>
+
+        <div class="task">
+            <h3><span class="task-num">TODO 4:</span> جدول منسّق</h3>
+            <p>نسّق جدول المؤهلات الدراسية بإضافة حدود، وخلفية لصف العناوين، وألوان متناوبة للصفوف.</p>
+            <div class="hint">
+                <strong>الخصائص:</strong> <code>border-collapse: collapse</code>, <code>border</code>, <code>:nth-child(even)</code>, <code>padding</code>
+            </div>
+        </div>
+
+        <div class="task">
+            <h3><span class="task-num">TODO 5:</span> تنسيق الروابط</h3>
+            <p>نسّق جميع الروابط باللون الأخضر ومن غير خط سفلي، وأضف تأثيرًا عند مرور الفأرة (hover).</p>
+            <div class="hint">
+                <strong>الخصائص:</strong> <code>color: #4caf50</code>, <code>text-decoration: none</code>, <code>:hover</code>
+            </div>
+        </div>
+
+        <div class="task">
+            <h3><span class="task-num">TODO 6:</span> ظل الحاوية</h3>
+            <p>أضف ظلًا (box-shadow) إلى <code>.cv-container</code> لتبدو كبطاقة عائمة فوق الصفحة.</p>
+            <div class="hint">
+                <strong>الخاصية:</strong> <code>box-shadow: 0 5px 30px rgba(0,0,0,0.3)</code>
+            </div>
+        </div>
+
+        <div class="task">
+            <h3><span class="task-num">TODO 7:</span> صورة دائرية</h3>
+            <p>اجعل الصورة الشخصية دائرية مع إطار أخضر وظل.</p>
+            <div class="hint">
+                <strong>الخصائص:</strong> <code>border-radius: 50%</code>, <code>border: 3px solid #4caf50</code>, <code>box-shadow</code>, <code>width: 150px</code>
+            </div>
+        </div>
+    </div>
+
+    <hr class="separator">
+
+    <!-- =============================================
+         كود HTML للسيرة الذاتية - نسّق هذا القسم باستخدام CSS في الأعلى
+         ============================================= -->
+
+    <div class="cv-container">
+
+        <div class="cv-header">
+            <img src="https://via.placeholder.com/150" alt="الصورة الشخصية" class="cv-photo">
+            <h1 class="cv-name">اسمك هنا</h1>
+            <p class="cv-title">مطوّر ويب | طالب في جامعة الأقصى</p>
+            <p class="cv-contact">
+                البريد الإلكتروني: <a href="/cdn-cgi/l/email-protection#2152555445444f55614459404c514d440f424e4c"><span class="__cf_email__" data-cfemail="4d3e3938292823390d28352c203d2128632e2220">[email&#160;protected]</span></a> |
+                الهاتف: <span dir="ltr">+970 123 456 789</span> |
+                <a href="https://github.com/yourusername">GitHub</a>
+            </p>
+        </div>
+
+        <div class="cv-section">
+            <h2 class="cv-section-title">نبذة عني</h2>
+            <p>طالب شغوف بتطوير الويب، أحب التعلّم وبناء مواقع حديثة. أدرس حاليًا في جامعة الأقصى، وأركّز على تقنيات الواجهة الأمامية مثل HTML و CSS و JavaScript.</p>
+        </div>
+
+        <div class="cv-section">
+            <h2 class="cv-section-title">المهارات</h2>
+            <ul class="skills-list">
+                <li>HTML5</li>
+                <li>CSS3</li>
+                <li>JavaScript</li>
+                <li>Git & GitHub</li>
+                <li>التصميم المتجاوب</li>
+                <li>حل المشكلات</li>
+                <li>Bootstrap</li>
+                <li>VS Code</li>
+            </ul>
+        </div>
+
+        <div class="cv-section">
+            <h2 class="cv-section-title">المؤهلات الدراسية</h2>
+            <table class="cv-table">
+                <thead>
+                    <tr>
+                        <th>الدرجة العلمية</th>
+                        <th>المؤسسة</th>
+                        <th>السنة</th>
+                        <th>الحالة</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>بكالوريوس إدارة الأعمال</td>
+                        <td>جامعة الأقصى</td>
+                        <td>2023 - حتى الآن</td>
+                        <td>قيد الدراسة</td>
+                    </tr>
+                    <tr>
+                        <td>شهادة الثانوية العامة</td>
+                        <td>المدرسة الثانوية</td>
+                        <td>2019 - 2023</td>
+                        <td>مكتملة</td>
+                    </tr>
+                    <tr>
+                        <td>دورات عبر الإنترنت</td>
+                        <td>freeCodeCamp / Coursera</td>
+                        <td>2024</td>
+                        <td>مكتملة</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="cv-section">
+            <h2 class="cv-section-title">المشاريع</h2>
+            <ul class="projects-list">
+                <li><strong>معرض أعمال شخصي (Portfolio)</strong> - موقع شخصي متجاوب مبني باستخدام HTML و CSS</li>
+                <li><strong>تطبيق آلة حاسبة</strong> - آلة حاسبة بسيطة باستخدام JavaScript</li>
+                <li><strong>تطبيق الطقس</strong> - يجلب بيانات الطقس من واجهة برمجية (API)</li>
+            </ul>
+        </div>
+
+        <div class="cv-section">
+            <h2 class="cv-section-title">تواصل معي</h2>
+            <p>
+                <a href="/cdn-cgi/l/email-protection#b8cbcccddcddd6ccf8ddc0d9d5c8d4dd96dbd7d5">راسلني عبر البريد</a> |
+                <a href="https://linkedin.com/in/yourprofile">LinkedIn</a> |
+                <a href="https://github.com/yourusername">GitHub</a>
+            </p>
+        </div>
+
+    </div>
+
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script type="module" src="https://static.cloudflareinsights.com/beacon.min.js/vce701823e78c4301a35b7e07294d87301792088814092" integrity="sha512-UKNk8GbxkABxKcXYuLkO16EleLGUkcvJWtpSNmExE0Too3ZaFAxTscNWEc1OdAv5/BikHawapSCaiD2XCmp+Bw==" data-cf-beacon='{"version":"2024.11.0","token":"a1dabd9b83e64f32bc03a4b3ded9fb02","r":1,"spa":2}' crossorigin="anonymous"></script>
+</body>
+</html>
